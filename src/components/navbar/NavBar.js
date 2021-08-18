@@ -1,10 +1,11 @@
 import React from 'react';
+import CartWidget from './CartWidget';
 import './navbar.css';
 
 const NavBar = () => {
     return (
         <header>
-            <div className="px-3 py-2 bg-dark text-white">
+            <div className="px-3 py-2 bg-navbar text-white fixed-top">
                 <div className="container">
                     <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                         <a href="/" className="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
@@ -23,11 +24,12 @@ const NavBar = () => {
                                 Categorías
                             </a>
                             </li>
-                            <li>
-                            <a href="/" className="nav-link text-white">
+                            <li className="position-relative">
+                                <CartWidget />
+                            {/* <a href="/" className="nav-link text-white">
                             <i className="bi-basket" role="img" width="24" height="24" aria-label="Carrito"></i><br/>
                                 Carrito
-                            </a>
+                            </a> */}
                             </li>
                         </ul>
                     </div> 

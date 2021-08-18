@@ -1,3 +1,6 @@
+.bg-navbar{
+    background-color: #293241;
+}
 a{
     text-align: center;
 }
@@ -5,6 +8,15 @@ a{
     font-size: xx-large;
 }
 .brandName{
+    font-weight: 600;
     padding-left: 10px;
     font-style: italic;
+}
+.start-65-15{
+    left:65%;
+    top: 15%;
+}
+
+.widget-carrito{
+    background-color: #EA526F;
 }
