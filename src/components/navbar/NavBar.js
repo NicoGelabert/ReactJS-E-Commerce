@@ -26,10 +26,6 @@ const NavBar = () => {
                             </li>
                             <li className="position-relative">
                                 <CartWidget />
-                            {/* <a href="/" className="nav-link text-white">
-                            <i className="bi-basket" role="img" width="24" height="24" aria-label="Carrito"></i><br/>
-                                Carrito
-                            </a> */}
                             </li>
                         </ul>
                     </div> 
