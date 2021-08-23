@@ -7,7 +7,7 @@ body{
 }
 .btn{
     border-radius: 50px;
-    padding: 10px 25px;
+    padding: 10px 15px;
     text-transform: uppercase;
     font-size:medium;
     letter-spacing: 1px;
@@ -29,4 +29,16 @@ body{
     color: #293241;
     border-color: #293241;
     background-color: transparent;
+}
+
+.itemcount{
+    margin: 30px auto;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.countrow{
+    justify-content: center;
+    margin: 50px 0;    
 }
