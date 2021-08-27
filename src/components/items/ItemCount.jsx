@@ -4,9 +4,7 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { faMinus } from '@fortawesome/free-solid-svg-icons';
 import './body.css';
 
-const ItemCount = () => {
-    const initial = 1;
-    const stock = 5;
+const ItemCount = ({ initial, stock }) => {
     const [count, setCount] = useState(initial)
     const handleClick = (number) => {
         return () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import ItemListContainer from './components/body/ItemListContainer';
+import ItemListContainer from './components/items/ItemListContainer';
 import NavBar from './components/navbar/NavBar';
 
 //const greeting = () => {

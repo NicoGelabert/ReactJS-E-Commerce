@@ -20,6 +20,12 @@ body{
     color: #fff;
     background-color: #EA526F;
 }
+.btn-carrito:active {
+    border-color: #fff;
+    background-color: transparent;
+    box-shadow: 0 0 0 2px white, 0 0 0 4px #293241;
+    color: #293241;
+}
 .btn-productos{
     color: #fff;
     background-color: #293241;
@@ -29,6 +35,21 @@ body{
     color: #293241;
     border-color: #293241;
     background-color: transparent;
+}
+
+.btn-productos:active {
+    border-color: #EA526F;
+    background-color: #EA526F;
+    box-shadow: 0 0 0 2px white, 0 0 0 4px #EA526F;
+    color: #fff;
+}
+
+textarea, select, input, button { 
+    outline: none;
+}
+.btn-productos:focus { 
+    outline-color: transparent; 
+    outline-style: none;
 }
 
 .itemcount{
@@ -41,4 +62,20 @@ body{
 .countrow{
     justify-content: center;
     margin: 50px 0;    
+}
+.products{
+    margin: 0 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.card{
+    border:none !important;
+}
+.product{
+    width: 300px;
+    margin-bottom: 75px;
+}
+.product img{
+    border-radius: 50%;
 }
