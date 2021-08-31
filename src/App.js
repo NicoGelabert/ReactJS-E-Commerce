@@ -1,6 +1,7 @@
 import React from 'react';
-import ItemListContainer from './components/items/ItemListContainer';
 import NavBar from './components/navbar/NavBar';
+import ItemListContainer from './components/items/ItemListContainer';
+import ItemDetailContainer from './components/items/ItemDetailContainer';
 
 //const greeting = () => {
 //  return React.createElement('h1', null, 'Bienvenido a Tornado E-Commerce');
@@ -23,6 +24,7 @@ function App() {
     <>
     <NavBar/>
     <ItemListContainer greeting={greeting}/>
+    <ItemDetailContainer />
     </>
   );
 }

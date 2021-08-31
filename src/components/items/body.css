@@ -79,3 +79,6 @@ textarea, select, input, button {
 .product img{
     border-radius: 50%;
 }
+.margin{
+    margin:0 auto;
+}

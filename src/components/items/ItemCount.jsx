@@ -20,9 +20,9 @@ const ItemCount = ({ initial, stock }) => {
         <div className="row countrow">
             <h3>Contador</h3>
             <div className="d-grid gap-2 d-md-block itemcount col-lg-2">
-                <button onClick={handleClick(false)} class="btn btn-productos" type="button"><FontAwesomeIcon icon={faMinus} /></button>
+                <button onClick={handleClick(false)} className="btn btn-productos" type="button"><FontAwesomeIcon icon={faMinus} /></button>
                     <h4>{ count }</h4>
-                <button onClick={handleClick(true)} class="btn btn-productos" type="button"><FontAwesomeIcon icon={faPlus} /></button>
+                <button onClick={handleClick(true)} className="btn btn-productos" type="button"><FontAwesomeIcon icon={faPlus} /></button>
             </div>
             <p>Stock disponible: { stock }</p>
         </div>
