@@ -1,16 +1,18 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
+import { NavLink } from 'react-router-dom';
 
-const Item = ({name, pictureUrl, description, price}) => {
+const Item = ({product}) => {
     return (
         <div className="card product row">
-            <img src={pictureUrl} className="card-img-top" alt={name} />
+            <img src={product.pictureUrl} className="card-img-top" alt={product.name} />
             <div className="card-body">
-                <h4 className="card-title">{name}</h4>
-                <p className="card-text">{description}</p>
-                <h5>$ {price}</h5>
-                <a href="/" className="btn btn-productos"><FontAwesomeIcon icon={faEye} /></a>
+                <h4 className="card-title">{product.name}</h4>
+                <NavLink to={`/categoria/${product.category}`}><span>{product.category}</span></NavLink>
+                <p className="card-text">{product.description}</p>
+                <h5>$ {product.price}</h5>
+                <NavLink to={`/animales/${product.id}`} className="btn btn-productos"><FontAwesomeIcon icon={faEye} /></NavLink>
             </div>
         </div>
     )

@@ -1,3 +1,11 @@
+# TORNADO E-COMMERCE
+
+IDEA -Aún en desarrollo-
+Plataforma pensada para donaciones para animales en peligro de extinción. 
+Cada usuario podrá donar una cantidad de dinero ya definida de acuerdo al nivel de peligrosidad de extinción de cada animal para poder, junto con otros usuarios, llegar a un monto final que permita tomar acciones para la conservación de ese animal.
+
+La plataforma está desarrollada con Bootstrap.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

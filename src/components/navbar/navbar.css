@@ -12,11 +12,34 @@ a{
     padding-left: 10px;
     font-style: italic;
 }
-.start-65-15{
-    left:65%;
-    top: 15%;
-}
 
 .widget-carrito{
     background-color: #EA526F;
+    position: relative;
+}
+.offcanvas {
+    background-color: #293241 !important;
+}
+.offcanvas-header i{
+    color: #EA526F;
+}
+.nav-item{
+    padding: 2rem 3rem;
+}
+.dropdown-menu{
+    background-color: #293241!important;
+    border: none;
+    padding-top: -10px;
+}
+.dropdown-item{
+    color: #EA526F;
+    text-align: center;
+    font-size: small;
+    padding-top: 0.5rem;
+    text-transform: capitalize;
+}
+@media (min-width: 992px) {
+    .nav-item{
+        padding: 0.5rem 2rem !important;
+    }
 }
