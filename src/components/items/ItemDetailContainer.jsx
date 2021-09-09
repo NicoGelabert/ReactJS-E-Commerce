@@ -10,6 +10,10 @@ const ItemDetailContainer = () => {
     const [animalDetail, setAnimalDetail] = useState()
     const [categories, setCategories] = useState([]);
     const {id} = useParams()
+    const [clicked, setClicked] = useState(false);
+    const onAdd = (qty)=>{
+        return ()=>{setClicked(true)}
+    }
     
     useEffect(()=>{
         const animalId = animals.find(animal => animal.id === id)
@@ -27,7 +31,7 @@ const ItemDetailContainer = () => {
             ?
             <Loader/>
             :
-            <ItemDetail animalDetail={animalDetail} categories={categories} />
+            <ItemDetail animalDetail={animalDetail} categories={categories} onAdd={onAdd} clicked={clicked} />
             }
         </div>
     )

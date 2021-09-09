@@ -45,7 +45,10 @@ a{
     box-shadow: 0 0 0 2px white, 0 0 0 4px #EA526F;
     color: #fff;
 }
-
+.btn-endshop{
+    font-size: small;
+    padding: .375rem .75rem;
+}
 textarea, select, input, button { 
     outline: none;
 }
@@ -58,37 +61,35 @@ textarea, select, input, button {
     display: flex !important;
     justify-content: space-between;
     align-items: baseline;
-    width: 100%;
 }
 .btncount{
     border-radius: 50%;
     font-size: smaller;
     padding: 5px 10px;
 }
-.countrow{
-    position: absolute;
-    bottom: 0;
-}
-
-.products{
-    margin: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
 .card{
     border:none !important;
 }
+
+.card-title h4{
+    margin-top: 0px;
+}
 .card-body{
-    padding-top: 0;
+    padding: 1rem 0 2rem 0;
 }
 .card span{
     font-weight: bold;
     text-transform: uppercase;
     font-size: small;
 }
+.products{
+    margin: 50px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .product{
-    width: 300px;
+    width: 100%;
     margin-bottom: 75px;
 }
 .product img{
@@ -99,9 +100,6 @@ textarea, select, input, button {
 }
 .productDetail img{
     border-radius: 5% !important;
-}
-.productDetailStock{
-    line-height: 0;
 }
 .productList{
     padding-left: 0;
@@ -116,23 +114,46 @@ textarea, select, input, button {
 .margin{
     margin:0 auto;
 }
-.padding-side{
-    padding: 0 20px;
+.margintop{
+    margin-top: 1rem;
 }
-
+@media (min-width: 576px) {
+    .product{
+        width: 300px;
+    }
+}
 @media (min-width:768px){
     .container, .container-md, .container-sm{
         max-width: 100%;
+    }
+    .padding-side{
+        padding: 0 20px;
+    }
+    .margintop{
+        margin-top: 0;
     }
 }
 @media (min-width:992px){
     .container, .container-md, .container-sm{
         max-width: 960px;
+    }    
+    .countrow{
+        position: absolute;
+        bottom: 0;
+    }
+    .card-title h4{
+        margin-top: 0px;
+    }
+    .products{
+        margin: 100px 0;
     }
 }
 @media (min-width:1200px){
     .container, .container-md, .container-sm{
         max-width: 1200px;
+    }
+    .products{
+        margin: 100px;
     }
 }
 @media (min-width:1400px){

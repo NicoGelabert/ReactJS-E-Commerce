@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 
 const Item = ({product}) => {
     return (
-        <div className="card product row">
+        <div className="card product row margin">
             <img src={product.pictureUrl} className="card-img-top" alt={product.name} />
             <div className="card-body">
                 <h4 className="card-title">{product.name}</h4>

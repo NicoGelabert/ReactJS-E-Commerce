@@ -1,0 +1,14 @@
+.alert{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 1rem;
+}
+.alert p{
+    padding: 10px;
+    margin: 0;
+}
+.btn-close{
+    width: .25em;
+    height: .25em;
+}
