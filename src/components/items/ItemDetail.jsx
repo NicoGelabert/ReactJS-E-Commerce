@@ -1,6 +1,7 @@
 import React from 'react'
 import ItemCount from './ItemCount'
 import { NavLink } from 'react-router-dom';
+import Success from '../alerts/Success';
 const ItemDetail = ({animalDetail, initial, categories, onAdd, clicked}) => {
     return (
         <div className="card mb-3 productDetail margin container mb-3">
@@ -28,7 +29,15 @@ const ItemDetail = ({animalDetail, initial, categories, onAdd, clicked}) => {
                     <p className="card-text">{animalDetail.description}</p>
                     <h3>$ {animalDetail.price}</h3>
                     <div className="row countrow">
+                        {
+                        !clicked
+                        ?
                         <ItemCount initial={ initial } stock={ animalDetail.stock } onAdd={ onAdd } clicked={clicked}/>
+                        :
+                        <Success 
+                        //count={ count }
+                         />
+                        }
                     </div>
                 </div>
                 </div>
