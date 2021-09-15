@@ -1,7 +1,8 @@
 import React from 'react'
 import './cart.css'
 
-const cart = () => {
+const Cart = () => {
+    //const {isInCart, clearCart, removeItem, cart} = useContext(CartContext)
     return (
         <div className="row cart">
             <img src="https://i.gifer.com/XSNt.gif" alt="No hay nada en tu carrito"/>
@@ -10,4 +11,4 @@ const cart = () => {
     )
 }
 
-export default cart
+export default Cart

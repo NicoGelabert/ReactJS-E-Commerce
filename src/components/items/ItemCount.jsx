@@ -5,7 +5,7 @@ import { faMinus } from '@fortawesome/free-solid-svg-icons';
 import './body.css';
 
 
-const ItemCount = ({ stock, onAdd }) => {
+const ItemCount = ({ item, stock, onAdd }) => {
     const initial = 1;
     const [count, setCount] = useState(initial)
     const handleClick = (number) => {

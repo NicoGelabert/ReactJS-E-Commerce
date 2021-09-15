@@ -4,15 +4,21 @@ import './body.css';
 import { animals, getAnimal, cat } from '../utils/promises';
 import Loader from '../loader/Loader';
 import { useParams } from 'react-router-dom';
+import { useCartContext } from '../../context/CartContext';
 
-const ItemDetailContainer = () => {
+const ItemDetailContainer = ({item}) => {
     const [loading, setLoading] = useState(true)
     const [animalDetail, setAnimalDetail] = useState()
     const [categories, setCategories] = useState([]);
     const {id} = useParams()
+    const {addItem} = useCartContext()
     const [clicked, setClicked] = useState(false);
+    
     const onAdd = (qty)=>{
-        return ()=>{setClicked(true)}
+        return ()=>{
+            addItem(animalDetail, qty);
+            setClicked(true)
+        }
     }
     
     useEffect(()=>{

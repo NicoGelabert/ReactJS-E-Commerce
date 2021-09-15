@@ -12,7 +12,7 @@ const ItemDetail = ({animalDetail, initial, categories, onAdd, clicked}) => {
                         {
                             categories.map((category) => { 
                                 return(
-                                    <li className="productList">
+                                    <li key={category.name} className="productList">
                                         <NavLink to={`/categoria/${category}`} >{category}</NavLink>
                                     </li>
                                     )
@@ -32,11 +32,9 @@ const ItemDetail = ({animalDetail, initial, categories, onAdd, clicked}) => {
                         {
                         !clicked
                         ?
-                        <ItemCount initial={ initial } stock={ animalDetail.stock } onAdd={ onAdd } clicked={clicked}/>
+                        <ItemCount initial={ initial } stock={ animalDetail.stock } onAdd={ onAdd } clicked={ clicked }/>
                         :
-                        <Success 
-                        //count={ count }
-                         />
+                        <Success />
                         }
                     </div>
                 </div>

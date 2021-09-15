@@ -93,7 +93,8 @@ textarea, select, input, button {
     margin-bottom: 75px;
 }
 .product img{
-    border-radius: 50%;
+    padding: 0;
+    border-radius: 50px;
 }
 .productDetail{
     text-align: left;
