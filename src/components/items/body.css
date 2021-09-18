@@ -56,7 +56,14 @@ textarea, select, input, button {
     outline-color: transparent; 
     outline-style: none;
 }
-
+.btn-trash{
+    border: none;
+    color:#EA526F;
+}
+.btn-trash:hover{
+    border: none;
+    color:#293241;
+}
 .itemcount{
     display: flex !important;
     justify-content: space-between;

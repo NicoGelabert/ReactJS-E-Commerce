@@ -11,6 +11,8 @@ const ItemListContainer = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        
+        
         if(category===undefined){
             promiseList.then(
                 (x)=> {setProducts(x)
