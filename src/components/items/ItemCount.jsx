@@ -32,9 +32,6 @@ const ItemCount = ({ item, stock, onAdd }) => {
                     }
                 </div>
             </div>
-            <div className="mt-4">
-                <p className="productDetailStock">Stock disponible: { stock }</p>
-            </div>
         </div>
     )
 }

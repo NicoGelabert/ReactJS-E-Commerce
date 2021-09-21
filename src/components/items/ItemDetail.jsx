@@ -9,15 +9,17 @@ const ItemDetail = ({animalDetail, initial, categories, onAdd, clicked}) => {
                 <div className="col-md-3 col-lg-2 card-body">
                     <h5>CATEGORÍAS</h5>
                     <ul className="productDetail productList">
+                        <div>
                         {
                             categories.map((category) => { 
                                 return(
-                                    <li key={category.name} className="productList">
-                                        <NavLink to={`/categoria/${category}`} >{category}</NavLink>
+                                    <li key={category.slug} className="productList">
+                                        <NavLink to={`/categoria/${category.slug}`} >{category.name}</NavLink>
                                     </li>
                                     )
                                 }) 
                         }
+                        </div>
                     </ul>
                 </div>
                 <div className="col-md-4 col-lg-5 padding-side">
@@ -28,6 +30,7 @@ const ItemDetail = ({animalDetail, initial, categories, onAdd, clicked}) => {
                     <h4 className="card-title">{animalDetail.name}</h4>
                     <p className="card-text">{animalDetail.description}</p>
                     <h3>$ {animalDetail.price}</h3>
+                    <p className="productDetailStock">Stock disponible: { animalDetail.stock }</p>
                     <div className="row countrow">
                         {
                         !clicked

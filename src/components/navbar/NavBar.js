@@ -1,22 +1,36 @@
 import React, { useState, useEffect} from 'react';
 import { NavLink, useParams } from 'react-router-dom';
-import { animals } from '../utils/promises';
+import { getFirestore } from '../utils/getFirebase';
+//import { animals } from '../utils/promises';
 import CartWidget from './CartWidget';
 import './navbar.css';
 
 const NavBar = () => {
     const [categories, setCategories] = useState([]);
     const {category} = useParams();
-    useEffect(()=>{
-        const cat = [];
-        animals.forEach(c => {
-            if (!cat.find(obj => obj === c.category)) {
-                cat.push(c.category);
+    useEffect(() => {
+        const db = getFirestore();
+        db.collection('categorias')
+        .get()
+        .then(querySnapshot => {
+            if(querySnapshot.size !== 0){
+                setCategories(querySnapshot.docs.map(cat => ({id: cat.id, ...cat.data()})))
             }
-        });
+        })
+        .catch(err => console.log(err))
+        .finally();
+        },[category])
+
+    // useEffect(()=>{
+    //     const cat = [];
+    //     animals.forEach(c => {
+    //         if (!cat.find(obj => obj === c.category)) {
+    //             cat.push(c.category);
+    //         }
+    //     });
         
-        setCategories(cat)
-    },[category])
+    //     setCategories(cat)
+    // },[category])
 
     console.log(categories)
     return (
@@ -51,7 +65,7 @@ const NavBar = () => {
                                 categories.map((category) => { 
                                     return(
                                         <li>
-                                            <NavLink to={`/categoria/${category}`} className="dropdown-item">{category}</NavLink>
+                                            <NavLink to={`/categoria/${category.slug}`} className="dropdown-item">{category.name}</NavLink>
                                         </li>
                                         )
                                     }) 

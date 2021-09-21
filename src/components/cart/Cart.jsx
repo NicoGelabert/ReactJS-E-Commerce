@@ -25,39 +25,39 @@ const Cart = () => {
                     <thead>
                         <tr>
                         <th scope="col">#</th>
-                        <th scope="col"></th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Cantidad</th>
                         <th scope="col">Precio</th>
                         <th scope="col">Total por unidad</th>
+                        <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
                     {cart.map(element =>
                         <tr>
-                        <th scope="row"><button className="btn-trash" onClick={() => removeItem(element.item.id, element.qty)}><FontAwesomeIcon icon={faTrashAlt} /></button></th>
                         <td><img src={element.item.pictureUrl} alt={element.item.name} /></td>
                         <td>{element.item.name}</td>
                         <td>{element.qty}</td>
                         <td>{element.item.price}</td>
                         <td>{element.item.price*element.qty}</td>
+                        <td><button className="btn-trash" onClick={() => removeItem(element.item.id, element.qty)}><FontAwesomeIcon icon={faTrashAlt} /></button></td>
                         </tr>
                     )}
                     </tbody>
                     <tfoot>
                         <tr>
-                            <th scope="col">Total</th>
-                            <th scope="col"></th>
                             <th scope="col"></th>
                             <th scope="col"></th>
                             <th scope="col"><div className="d-print-none">{cart.map(element => {
                                 return total = element.item.price * element.qty + total} )}</div></th>
+                            <th scope="col">Total</th>
                             <th scope="col">$ {total}</th>
+                            <th scope="col"></th>
                         </tr>                        
                     </tfoot>
                 </table>
                 <div>
-                <button type="button" onClick={clearCart} className="btn btn-carrito btn-lg px-4 gap-3" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">Borrar productos</button>
+                <button type="button" onClick={clearCart} className="btn btn-carrito btn-lg px-4 gap-3 centrar" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">Borrar productos</button>
                 </div>
         </div>
         }

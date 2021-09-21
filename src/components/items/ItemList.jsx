@@ -1,20 +1,16 @@
-import Loader from '../loader/Loader';
 import Item from './Item';
 
-const ItemList = ({products, loading}) => {
+const ItemList = ({products}) => {
     
     return (
         <div className="row products">
-            {loading
-            ?
-            <Loader/>
-            :
+            {
             products.map( (product) => { 
                 return(
                     <Item key={product.id} product={product}/>
                     )
                 }) 
-                }
+            }
         </div>
     )
 }
