@@ -10,6 +10,9 @@ const Success = ({ count }) => {
             <NavLink to="/cart">
                 <button className="btn btn-carrito btn-lg px-4 gap-3 btn-endshop">Finalizar compra</button>
             </NavLink>
+            <NavLink to="/">
+                <button className="btn btn-productos btn-lg px-4 mx-3 gap-3 btn-endshop">Seguir comprando</button>
+            </NavLink>
             
             <div class="alert alert-success d-flex align-items-center" role="alert">
                     <FontAwesomeIcon icon={faCheckCircle} />

@@ -48,9 +48,8 @@ const ItemDetailContainer = ({item}) => {
         })
         .catch(err => console.log(err))
         .finally(() => {setLoading(false)});
-        },[categories])
-        
-        console.log(categories)
+        },[])
+
     
     // useEffect(()=>{
     //     const animalId = animals.find(animal => animal.id === id)

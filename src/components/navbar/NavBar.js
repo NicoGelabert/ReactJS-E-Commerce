@@ -32,7 +32,6 @@ const NavBar = () => {
     //     setCategories(cat)
     // },[category])
 
-    console.log(categories)
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-navbar">
             <div className="container-fluid">
