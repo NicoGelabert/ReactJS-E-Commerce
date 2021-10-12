@@ -1,7 +1,6 @@
 import React, { useState, useEffect} from 'react';
 import { NavLink, useParams } from 'react-router-dom';
 import { getFirestore } from '../utils/getFirebase';
-//import { animals } from '../utils/promises';
 import CartWidget from './CartWidget';
 import './navbar.css';
 
@@ -20,17 +19,6 @@ const NavBar = () => {
         .catch(err => console.log(err))
         .finally();
         },[category])
-
-    // useEffect(()=>{
-    //     const cat = [];
-    //     animals.forEach(c => {
-    //         if (!cat.find(obj => obj === c.category)) {
-    //             cat.push(c.category);
-    //         }
-    //     });
-        
-    //     setCategories(cat)
-    // },[category])
 
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-navbar">

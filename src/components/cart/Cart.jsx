@@ -21,7 +21,7 @@ const Cart = () => {
             
                 <ListCartItems/>
                 <NavLink to="/checkout">
-                    <button className="btn">completar compra</button>
+                    <button className="btn btn-productos btn-lg px-4 gap-3">completar compra</button>
                 </NavLink>
                 
         </div>

@@ -30,8 +30,6 @@ function CartContextProvider({children}){
         setCart(cart.filter(obj => obj.item.id !== item));
         setcantItems(cantItems - qty);
     }
-    
-    //console.log(cart)
 
     function clearCart(){
         setCart([])
@@ -46,18 +44,3 @@ function CartContextProvider({children}){
 }
 
 export default CartContextProvider
-
-// export const CartContextProvider = ({children}) => {
-
-//     
-
-     
-
-//     const clearCart = () => setCart([])
-
-//     return(
-//         <CartContext.Provider value={{addItem, isInCart, clearCart, removeItem, cart}}>
-//             {children}
-//         </CartContext.Provider>
-//     )
-// }

@@ -1,7 +1,7 @@
 import React from 'react'
 
 const CartForm = ({formData, setFormData, inputs, handleSubmit}) => {
-        
+     
     function handleChange(e) {
         setFormData(
             {
@@ -9,8 +9,7 @@ const CartForm = ({formData, setFormData, inputs, handleSubmit}) => {
                 [e.target.name]: e.target.value,
             }
         )
-    }   
-
+    }
     return (
         <div className="form">
             <form
@@ -20,12 +19,14 @@ const CartForm = ({formData, setFormData, inputs, handleSubmit}) => {
                 return(
                     <div className="mt-3">
                         <label>{inp.label}</label>
-                        <input className="form-control" type={inp.type} name={inp.name} placeholder={inp.placeholder} value={inp.value} />
+                        <input className="form-control" id={inp.id} type={inp.type} name={inp.name} placeholder={inp.placeholder} value={inp.value} />
                     </div>
                 )})
                 }
                 <div className="mt-5">
-                    <button className="btn btn-productos">confirmar compra</button>
+                    <button id="purchase" className="btn btn-productos">
+                        confirmar compra
+                    </button>
                 </div>
             </form>
         </div>

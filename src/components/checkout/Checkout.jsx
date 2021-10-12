@@ -15,32 +15,36 @@ const Checkout = () => {
 
     const [formData, setFormData] = useState(initialState)
     const inputs = [
-        {type:"text", name:"name", placeholder:"ingrese su nombre", value: formData.name, label: "Nombre"},
-        {type:"text", name:"lastname", placeholder:"ingrese su apellido", value: formData.lastname, label: "Apellido"},
-        {type:"text", name:"phone", placeholder:"ingrese su telefono", value: formData.phone, label: "Número de teléfono"},
-        {type:"email", name:"email", placeholder:"ingrese su email", value: formData.email, label: "Email"},
-        {type:"email", name:"emailconfirmation", placeholder:"reingrese su email", label: "Confirmá tu email"}
+        {type:"text", id:"name", name:"name", placeholder:"ingrese su nombre", value: formData.name, label: "Nombre"},
+        {type:"text", id:"lastname", name:"lastname", placeholder:"ingrese su apellido", value: formData.lastname, label: "Apellido"},
+        {type:"text", id:"phone", name:"phone", placeholder:"ingrese su telefono", value: formData.phone, label: "Número de teléfono"},
+        {type:"email", id: "email", name:"email", placeholder:"ingrese su email", value: formData.email, label: "Email"},
+        {type:"email", id:"emailconfirmation", name:"emailconfirmation", placeholder:"reingrese su email", label: "Confirmá tu email"}
     ]
     
     function handleSubmit(e){
         e.preventDefault();
-        const newOrder = {
-            date: firebase.firestore.Timestamp.fromDate(new Date()),
-            buyer: formData,
-            item: cart,
-            total: total,
+        if (document.getElementById("email").value === document.getElementById("emailconfirmation").value && document.getElementById("name").value !== "" && document.getElementById("lastname").value !== "" && document.getElementById("phone").value !== "") { 
+            const newOrder = {
+                date: firebase.firestore.Timestamp.fromDate(new Date()),
+                buyer: formData,
+                item: cart,
+                total: total,
+            }
+            const db = getFirestore();
+            const orderCollection = db.collection('order');
+            orderCollection
+            .add(newOrder)
+            .then(resp => setOrderData(resp))
+            .catch(err => console.log(err))
+            .finally(
+                setFormData(initialState),
+                setCartOrder(cart),
+                clearCart(),
+            )
+        }else{
+            alert('Por favor revise los datos')
         }
-        const db = getFirestore();
-        const orderCollection = db.collection('order');
-        orderCollection
-        .add(newOrder)
-        .then(resp => setOrderData(resp))
-        .catch(err => console.log(err))
-        .finally(
-            setFormData(initialState),
-            setCartOrder(cart),
-            clearCart()
-        )
     }
 
     return (
@@ -53,7 +57,7 @@ const Checkout = () => {
                 total={total}
                 inputs={inputs}
                 handleSubmit={handleSubmit}
-            />
+                />
             }
             {cart.length === 0 &&
                 <div className="cartlistcontainer">
