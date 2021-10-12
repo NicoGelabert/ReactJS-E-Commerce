@@ -6,6 +6,8 @@ Cada usuario podrá donar una cantidad de dinero ya definida de acuerdo al nivel
 
 La plataforma está desarrollada con Bootstrap.
 
+El proyecto puede verse en https://nifty-booth-702758.netlify.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
